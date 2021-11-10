@@ -146,7 +146,9 @@ As the for loop iterated through all the voting data, row by row, the following 
     * Candidate Diana DeGette who received 73.8% of the votes and 272,892 number of votes.
     
 <h3><p align=center> Election Audit Summary:</p></h3>
+
 The Python script used for this analysis can be used for all election audits with the same analysis requirements and similar datasets of even bigger sizes. In addition to that the script can be very easily modified to also accommodate following scenarios:
+
   1. If the dataset contains zipcodes instead of counties, county variables, lists and dictionaries could be changed accordingly. The data type for zipcode can be string to accommodate any aplha-numeric zipcodes.
   2. If there are two or more candidates with the same name, each candidate can be given a unique ID. The unique ID should be used to keep track of votes for the different candidates instead of candidate names.
   3. The present script can also be used to get the state wise election audit results, needing only to change county variables,lists and dictionary to state variables, lists and dictionary. 
