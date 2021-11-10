@@ -34,9 +34,24 @@ To calculate county and candidate related percentages and votes, we go through t
 As the for loop iterates through all the voting data, row by row, the following algorithm is implemented:
 
   1. The total number of votes required for the percentage calculations are tracked using **total_votes** variable.
-  2. Inside the for loop, a conditional if statement creates a list of unique candidates. Using the same conditional we create **candidate_votes{}** dictionary. 
-  3. Similarly, a second if statement makes list of unique county names and then tracks county wise votes in **county_votes{}** dictionary. 
-  4. Using to this algorithm, by the end of all iterations of the for loop, we ended up with:
+  2. Inside the for loop, a conditional if statement creates a list of unique candidates. Here, if a candidate_name is encountered for the first time, it is added to the **candidate_votes{}** dictionary as a key and 1 is added as it's value for the vote count. If candidate name is already in the dictionary, it's vote count is increased by 1.
+<pre>
+
+if candidate_name not in candidate_options: </b>
+
+            # Add the candidate name to the candidate list.
+            candidate_options.append(candidate_name)
+
+            # And begin tracking that candidate's voter count.
+            candidate_votes[candidate_name] = 0
+
+        # Add a vote to that candidate's count
+        candidate_votes[candidate_name] += 1
+
+</pre>
+
+  4. Similarly, a second if statement makes list of unique county names and then tracks county wise votes in **county_votes{}** dictionary. 
+  5. Using to this algorithm, by the end of all iterations of the for loop, we ended up with:
       - **Total number of votes**
       - **candidate_votes{} dictionary** with **unique candidate names** and **corresponding vote count**
       - **county_votes{} dictionary** with **unique county names** and **their corresponding vote count**
