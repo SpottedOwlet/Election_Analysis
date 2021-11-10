@@ -2,7 +2,7 @@
 
 ### Overview & Purpose of Election Audit: 
 
-A Colorado Board of Elections employee has assigned tasks listed below to complete the election audit of a recent congressional election. The following tasks form the ground for the entire analysis:
+A Colorado Board of Elections employee has assigned tasks listed below to complete the election audit of a recent congressional election. The following tasks form the ground for the present analysis:
 
   1. Calculate the total number of votes cast.
   2. The voter turnout for each county
@@ -79,12 +79,20 @@ As the for loop iterates through all the voting data, row by row, the following 
         
         </pre>
       
-  5. Once all the relevant data was acquired in one variable and two dictionaries, further analysis became simple.
-      - The data from county_votes dictionary was extracted and printed to a text file using a for loop. The county percentages were also calculated during this phase and printed to the text file.
-      - Similarly, data from candidate_votes dictionary was extracted using for loop and percentages were also calculated and added to the same text file.
-      - Furthermore, the county with highest vote turnout and the winning candidate were decided within respective for loops using if conditional statements.
+  5. After all the relevant data is acquired in one variable (total_votes) and two dictionaries (county_votes{} & candidate_votes{}), the next steps are:
+      - Extract data from county_votes dictionary and printed it to a text file using a for loop. The county percentages are also calculated during this phase and printed to the text file.
+      - Similarly, data from candidate_votes dictionary is extracted using for loop and percentages are also calculated and added to the same text file.
+      - Furthermore, the county with highest vote turnout and the winning candidate are decided within respective for loops while iterating through dictionaries, using if conditional statements.
       
-<b><p align=center> Example code for county votes calculations can be referred to in the code block below:</p> </b>
+,,,
+      
+      if (county_vote_count>largest_voter_turnout):  </b>
+            largest_voter_turnout = county_vote_count
+            largest_vote_county = county_name
+      
+ ,,,
+      
+<b><p align=center> Example code for entire county votes calculations can be referred to in the code block below:</p> </b>
  
  <pre>
  
@@ -125,7 +133,7 @@ As the for loop iterates through all the voting data, row by row, the following 
 
 ### Election Audit Results:
 
-The analysis of the election presented following results:
+The analysis of the election presents following results:
 
 <img width="320" alt="Screen Shot 2021-11-09 at 11 25 49 PM" src="https://user-images.githubusercontent.com/90424752/141069345-36eb7b01-ed50-4ea0-b8c0-8de655a5ba48.png">
 
@@ -148,8 +156,8 @@ The analysis of the election presented following results:
     * Candidate Diana DeGette who received 73.8% of the votes and 272,892 number of votes.
     
 ### Election Audit Summary:
-The Python script used for this analysis can be used for all election audits with the same analysis requirements and similar datasets of even bigger sizes. In addition to that the script can be very easily modified to also accommodate following scenarios:
-  1. If the dataset contains zipcodes instead of counties, county variables, lists and dictionaries could be changed accordingly. The data type for zipcode can be string to accommodate any aplha-numeric zipcodes.
-  2. If there are two or more candidates with the same name, each candidate can be given a unique ID. The unique ID should be used to keep track of votes for the different candidates instead of candidate names.
-  3. The present script can also be used to get the state wise election audit results, needing only to change county variables,lists and dictionary to state variables, lists and dictionary. 
+The Python script used for this analysis can be used for all election audits with the same analysis requirements and similar datasets of even bigger sizes. In addition to that, the script can be easily modified to accommodate following scenarios:
+  1. If the dataset contains zipcodes instead of counties and if we need the zipcode wise calculations, the county variables, lists and dictionaries could be changed accordingly to hold zipcodes instead of county names. The data type for zipcode can be string to accommodate any aplha-numeric zipcodes.
+  2. If there are two or more candidates with the same name, each candidate can be given a unique ID. The unique ID should be used to keep track of votes for the different candidates instead of candidate names. Candidate_name will be replaced by candidate_id in this scenario.
+  3. The present script can also be used to get the state wise election audit results, needing only to replace county data by state data.
 
