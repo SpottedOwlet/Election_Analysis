@@ -84,13 +84,6 @@ As the for loop iterates through all the voting data, row by row, the following 
       - Similarly, data from candidate_votes dictionary is extracted using for loop and percentages are also calculated and added to the same text file.
       - Furthermore, the county with highest vote turnout and the winning candidate are decided within respective for loops while iterating through dictionaries, using if conditional statements.
       
-,,,
-      
-      if (county_vote_count>largest_voter_turnout):  </b>
-            largest_voter_turnout = county_vote_count
-            largest_vote_county = county_name
-      
- ,,,
       
 <b><p align=center> Example code for entire county votes calculations can be referred to in the code block below:</p> </b>
  
