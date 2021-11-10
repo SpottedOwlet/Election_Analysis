@@ -1,10 +1,6 @@
 <h2> <p align=center> Election Analysis </p></h2>
 
-<<<<<<< Updated upstream
-<h3><p align=center>Overview & Purpose of Election Audit: </p></h3>
-=======
 ### Overview of Election Audit: 
->>>>>>> Stashed changes
 
 A Colorado Board of Elections employee has assigned tasks listed below to complete the election audit of a recent congressional election. The following tasks form the ground of the entire analysis:
 
@@ -16,14 +12,13 @@ A Colorado Board of Elections employee has assigned tasks listed below to comple
   6. Calculate the total number of votes each candidate received.
   7. Calculate the percentage of votes each candidate won.
   8. Determine the winner of the election based on popular vote.
-<<<<<<< Updated upstream
 
 ### Resources:
 - Data Source: election_results.csv
-- Software : Python 3.8.8, Visual Studio Code 1.60.0 
+- Software : Python 3.8.8, Visual Studio Code 1.60.0
 
 
-<h3><p align=center> Challenge Overview: <p></h3>
+### Challenge Overview:
 In this section, the code used to get the results of the election audit is discussed in detail. 
 The dataset election_results.csv contained the entire voting data in 369,711 rows and 3 columns containing Ballot ID, County name and Candidate name.
 The county wise counting and percentage calculations as well as candidate specific percentages and counting was achieved using only one **for loop**.
@@ -126,47 +121,11 @@ As the for loop iterated through all the voting data, row by row, the following 
  </pre>
  
 
-<h2><p align=center> Election Audit Results: </h2> </p>
-
-<p align=center> The results of the Election Audit analysis, as printed by above script in a text file are attached below: </p>
-
-<p align=center> <img width="320" alt="Screen Shot 2021-11-09 at 11 25 49 PM" src="https://user-images.githubusercontent.com/90424752/141069345-36eb7b01-ed50-4ea0-b8c0-8de655a5ba48.png"> </p>
-
-
-  * There were total 369,711 votes cast in the election.
-  * The County Votes were:
-    * Jefferson County was responsible for 10.5% and 38,855 number of votes.
-    * Denver County was responsible for 82.8% and 306,055 number of votes.
-    * Arapahoe County was responsible for 6.7% and 24,801 number of votes.
-  * The County with the largest voter turnout was Denver with 82.8% and 306,055 number of the total votes.
-  * The candidates were:
-    * Charles Casper Stockham
-    * Diana DeGette
-    * Raymon Anthony Doane
-  * The candidate results were:
-    * Charles Casper Stockham received 23.0% of the votes and 85,213 number of votes.
-    * Diana DeGette received 73.8% of the votes and 272,892 number of votes.
-    * Raymon Anthony Doane received 3.1% of the votes and 11,606 number of votes.
-  * The winner of the election based on popular votes was:
-    * Candidate Diana DeGette who received 73.8% of the votes and 272,892 number of votes.
-    
-<h3><p align=center> Election Audit Summary:</p></h3>
-
-The Python script used for this analysis can be used for all election audits with the same analysis requirements and similar datasets of even bigger sizes. In addition to that the script can be very easily modified to also accommodate following scenarios:
-
-  1. If the dataset contains zipcodes instead of counties, county variables, lists and dictionaries could be changed accordingly. The data type for zipcode can be string to accommodate any aplha-numeric zipcodes.
-  2. If there are two or more candidates with the same name, each candidate can be given a unique ID. The unique ID should be used to keep track of votes for the different candidates instead of candidate names.
-  3. The present script can also be used to get the state wise election audit results, needing only to change county variables,lists and dictionary to state variables, lists and dictionary. 
-=======
-
-### Resources:
-- Data Source: election_results.csv
-- Software : Python 3.8.8, Visual Studio Code 1.60.0
-
 ### Election Audit Results:
 
 The analysis of the election presented following results:
 
+<img width="320" alt="Screen Shot 2021-11-09 at 11 25 49 PM" src="https://user-images.githubusercontent.com/90424752/141069345-36eb7b01-ed50-4ea0-b8c0-8de655a5ba48.png">
 
 
   * There were total 369,711 votes cast in the election.
@@ -187,17 +146,8 @@ The analysis of the election presented following results:
     * Candidate Diana DeGette who received 73.8% of the votes and 272,892 number of votes.
     
 ### Election Audit Summary:
+The Python script used for this analysis can be used for all election audits with the same analysis requirements and similar datasets of even bigger sizes. In addition to that the script can be very easily modified to also accommodate following scenarios:
+  1. If the dataset contains zipcodes instead of counties, county variables, lists and dictionaries could be changed accordingly. The data type for zipcode can be string to accommodate any aplha-numeric zipcodes.
+  2. If there are two or more candidates with the same name, each candidate can be given a unique ID. The unique ID should be used to keep track of votes for the different candidates instead of candidate names.
+  3. The present script can also be used to get the state wise election audit results, needing only to change county variables,lists and dictionary to state variables, lists and dictionary. 
 
-
-
-### Challenge Overview:
-
-### Challenge Summary:
-
-
-
-
-
-Election-Audit Summary: In a summary statement, provide a business proposal to the election commission on how this script can be used—with some modifications—for any election. Give at least two examples of how this script can be modified to be used for other elections.
-
->>>>>>> Stashed changes
