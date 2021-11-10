@@ -126,10 +126,11 @@ As the for loop iterates through all the voting data, row by row, the following 
 
 ### Election Audit Results:
 
-The analysis of the election presents following results:
+After running the script discussed above, the election results are printed to the terminal and also printed to a text file generated during the analysis. The screenshot of the results displayed on the terminal is attached here:
 
 <img width="320" alt="Screen Shot 2021-11-09 at 11 25 49 PM" src="https://user-images.githubusercontent.com/90424752/141069345-36eb7b01-ed50-4ea0-b8c0-8de655a5ba48.png">
 
+The Outcomes of Congressional Elections are stated below:
 
   * There were total 369,711 votes cast in the election.
   * The County Votes were:
