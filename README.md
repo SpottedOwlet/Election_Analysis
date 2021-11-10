@@ -1,6 +1,6 @@
 <h2> <p align=center> Election Analysis </p></h2>
 
-### Overview of Election Audit: 
+<h3><p align=center>Overview & Purpose of Election Audit: </p></h3>
 
 A Colorado Board of Elections employee has assigned tasks listed below to complete the election audit of a recent congressional election. The following tasks form the ground of the entire analysis:
 
@@ -15,10 +15,10 @@ A Colorado Board of Elections employee has assigned tasks listed below to comple
 
 ### Resources:
 - Data Source: election_results.csv
-- Software : Python 3.8.8, Visual Studio Code 1.60.0
+- Software : Python 3.8.8, Visual Studio Code 1.60.0 
 
 
-### Challenge Overview:
+<h3><p align=center> Challenge Overview: <p></h3>
 In this section, the code used to get the results of the election audit is discussed in detail. 
 The dataset election_results.csv contained the entire voting data in 369,711 rows and 3 columns containing Ballot ID, County name and Candidate name.
 The county wise counting and percentage calculations as well as candidate specific percentages and counting was achieved using only one **for loop**.
@@ -121,11 +121,11 @@ As the for loop iterated through all the voting data, row by row, the following 
  </pre>
  
 
-### Election Audit Results:
+<h2><p align=center> Election Audit Results: </h2> </p>
 
-The analysis of the election presented following results:
+<p align=center> The results of the Election Audit analysis, as printed by above script in a text file are attached below: </p>
 
-<img width="320" alt="Screen Shot 2021-11-09 at 11 25 49 PM" src="https://user-images.githubusercontent.com/90424752/141069345-36eb7b01-ed50-4ea0-b8c0-8de655a5ba48.png">
+<p align=center> <img width="320" alt="Screen Shot 2021-11-09 at 11 25 49 PM" src="https://user-images.githubusercontent.com/90424752/141069345-36eb7b01-ed50-4ea0-b8c0-8de655a5ba48.png"> </p>
 
 
   * There were total 369,711 votes cast in the election.
@@ -138,7 +138,7 @@ The analysis of the election presented following results:
     * Charles Casper Stockham
     * Diana DeGette
     * Raymon Anthony Doane
-  * The camdidate results were:
+  * The candidate results were:
     * Charles Casper Stockham received 23.0% of the votes and 85,213 number of votes.
     * Diana DeGette received 73.8% of the votes and 272,892 number of votes.
     * Raymon Anthony Doane received 3.1% of the votes and 11,606 number of votes.
