@@ -104,12 +104,12 @@ As the for loop iterates through all the voting data, row by row, the following 
         </pre>
       
   5. After all the relevant data is acquired in one variable (total_votes) and two dictionaries (county_votes{} & candidate_votes{}), the next steps are:
-      - Extract data from county_votes dictionary and printed it to a text file using a for loop. The county percentages are also calculated during this phase and printed to the text file.
+      - **Extract** **data** from **county_votes** **dictionary** and printed it to a text file using a for loop. The county percentages are also calculated during this phase and printed to the text file.
       - Similarly, data from candidate_votes dictionary is extracted using for loop and percentages are also calculated and added to the same text file.
-      - Furthermore, the county with highest vote turnout and the winning candidate are decided within respective for loops while iterating through dictionaries, using if conditional statements.
+      - Furthermore, the **county** **with** **highest** **vote** turnout and the **winning** **candidate** are decided within respective for loops while iterating through dictionaries, using **if** **conditional** **statements**.
       
       
-<b><p align=center> Example code for entire county votes calculations can be referred to in the code block below:</p> </b>
+<b><p align=center> Example code for the county votes calculations can be referred to in the code block below:</p> </b>
  
  <pre>
  
