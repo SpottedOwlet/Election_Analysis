@@ -23,11 +23,19 @@ The Python code used for the election audit is discussed in detail in challenge 
 ### Challenge Overview:
 In this section, the code used for the election audit is discussed in detail. 
 The dataset election_results.csv cotanined the entire voting data in 369,711 rows and 3 columns. The three columns held the information about Ballot ID, County name and Candidate name.
-To calculate county and candidate related percentages and votes, we go through the entire dataset once, using a **for loop**.
+To calculate county and candidate related percentages and votes, we go through the entire dataset once, using a **for loop**. The following two dictionaries are used to keep track of the data:
+  - **candidate_votes{}**
+    - This dictionary keeps track of unique candidates and their corresponding votes.
+    - This dictionary uses candidate_name as a key and stores corresponding votes as thier values.
+  - **county_votes{}**
+    - This dictionary keeps track of unique county names and each counties vote count.
+    - This dictionary uses county_name as keys to store each county's votes as it's values.
+
 As the for loop iterates through all the voting data, row by row, the following algorithm is implemented:
+
   1. The total number of votes required for the percentage calculations are tracked using **total_votes** variable.
-  2. Conditional statement (if statement) is used inside the for loop, to create a list of unique candidates, which in turn is used to keep track of votes of respective candidates in a **candidate_votes{}** dictionary. The **key** for the dictionary is **candidate_name** and the **value** is the number of **votes** candidate received.
-  3. Similarly, a second if statement makes list of unique county names and then tracks county wise votes in **county_votes{}** dictionary. Here, the **county_name** is the **key** and **value** is the corresponding **vote** **count**.
+  2. Inside the for loop, a conditional if statement creates a list of unique candidates. Using the same conditional we create **candidate_votes{}** dictionary. 
+  3. Similarly, a second if statement makes list of unique county names and then tracks county wise votes in **county_votes{}** dictionary. 
   4. Using to this algorithm, by the end of all iterations of the for loop, we ended up with:
       - **Total number of votes**
       - **candidate_votes{} dictionary** with **unique candidate names** and **corresponding vote count**
