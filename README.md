@@ -1,8 +1,8 @@
 <h2> <p align=center> Election Analysis </p></h2>
 
-### Overview of Election Audit: 
+### Overview & Purpose of Election Audit: 
 
-A Colorado Board of Elections employee has assigned tasks listed below to complete the election audit of a recent congressional election. The following tasks form the ground of the entire analysis:
+A Colorado Board of Elections employee has assigned tasks listed below to complete the election audit of a recent congressional election. The following tasks form the ground for the entire analysis:
 
   1. Calculate the total number of votes cast.
   2. The voter turnout for each county
@@ -13,19 +13,21 @@ A Colorado Board of Elections employee has assigned tasks listed below to comple
   7. Calculate the percentage of votes each candidate won.
   8. Determine the winner of the election based on popular vote.
 
+The Python code used for the election audit is discussed in detail in challenge overview section. Election audit results are then presented in the next section, followed by some comments and suggestions about the reusability of this Python script in different scenarios.
+
 ### Resources:
 - Data Source: election_results.csv
 - Software : Python 3.8.8, Visual Studio Code 1.60.0
 
 
 ### Challenge Overview:
-In this section, the code used to get the results of the election audit is discussed in detail. 
-The dataset election_results.csv contained the entire voting data in 369,711 rows and 3 columns containing Ballot ID, County name and Candidate name.
-The county wise counting and percentage calculations as well as candidate specific percentages and counting was achieved using only one **for loop**.
-As the for loop iterated through all the voting data, row by row, the following algorithm was implemented:
-  1. The total number of  votes required for the percentage calculations were tracked using **total_votes** variable.
-  2. Conditional statement (if statement) was used inside the for loop, to create a list of unique candidates, which in turn was used to keep track of votes of respective candidates in a **candidate_votes{}** dictionary.
-  3. Similarly, a second if statement was used to make a list of unique county names, which was then used to make **county_votes{}** dictionary holding county names and corresponding county votes.
+In this section, the code used for the election audit is discussed in detail. 
+The dataset election_results.csv cotanined the entire voting data in 369,711 rows and 3 columns. The three columns held the information about Ballot ID, County name and Candidate name.
+To calculate county and candidate related percentages and votes, we go through the entire dataset once, using a **for loop**.
+As the for loop iterates through all the voting data, row by row, the following algorithm is implemented:
+  1. The total number of votes required for the percentage calculations are tracked using **total_votes** variable.
+  2. Conditional statement (if statement) is used inside the for loop, to create a list of unique candidates, which in turn is used to keep track of votes of respective candidates in a **candidate_votes{}** dictionary. The **key** for the dictionary is **candidate_name** and the **value** is the number of **votes** candidate received.
+  3. Similarly, a second if statement makes list of unique county names and then tracks county wise votes in **county_votes{}** dictionary. Here, the **county_name** is the **key** and **value** is the corresponding **vote** **count**.
   4. Using to this algorithm, by the end of all iterations of the for loop, we ended up with:
       - **Total number of votes**
       - **candidate_votes{} dictionary** with **unique candidate names** and **corresponding vote count**
